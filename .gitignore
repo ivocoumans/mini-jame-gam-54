@@ -12,7 +12,6 @@ data_*/
 mono_crash.*
 
 # Build / export artifacts
-*.pck
 *.exe
 *.apk
 *.aab
