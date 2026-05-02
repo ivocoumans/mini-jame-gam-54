@@ -1,8 +1,22 @@
 [gd_scene format=3 uid="uid://s3f623bq5y6u"]
 
-[ext_resource type="Texture2D" uid="uid://cimwxt101ff3j" path="res://assets/buildings/barn.png" id="1_dgpu2"]
+[ext_resource type="Script" uid="uid://myjnn0pwm3ng" path="res://scenes/objects/barn.gd" id="1_08rcu"]
+[ext_resource type="Texture2D" uid="uid://c2hl5pyvhtlva" path="res://assets/buildings/barn_top.png" id="2_jtvgg"]
+[ext_resource type="Texture2D" uid="uid://r456tje8oac8" path="res://assets/buildings/barn_bottom.png" id="3_g07qk"]
 
-[node name="Barn" type="Node2D" unique_id=1559489125]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgpu2"]
+size = Vector2(93, 51)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=986384604]
-texture = ExtResource("1_dgpu2")
+[node name="Barn" type="StaticBody2D" unique_id=2141464149]
+script = ExtResource("1_08rcu")
+
+[node name="SpriteTop" type="Sprite2D" parent="." unique_id=986384604]
+z_index = 10
+texture = ExtResource("2_jtvgg")
+
+[node name="SpriteBottom" type="Sprite2D" parent="." unique_id=1981486883]
+texture = ExtResource("3_g07qk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1302103841]
+position = Vector2(0.5, 18.5)
+shape = SubResource("RectangleShape2D_dgpu2")

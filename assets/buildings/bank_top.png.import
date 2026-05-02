@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cimwxt101ff3j"
-path="res://.godot/imported/barn.png-4fc297cccfd8d3257344c8d144bd1dc1.ctex"
+uid="uid://b0yipn1k1l1fn"
+path="res://.godot/imported/bank_top.png-f849f2dae19feec0f2ee782a805694c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/buildings/barn.png"
-dest_files=["res://.godot/imported/barn.png-4fc297cccfd8d3257344c8d144bd1dc1.ctex"]
+source_file="res://assets/buildings/bank_top.png"
+dest_files=["res://.godot/imported/bank_top.png-f849f2dae19feec0f2ee782a805694c7.ctex"]
 
 [params]
 

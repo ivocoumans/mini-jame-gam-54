@@ -15,6 +15,7 @@ func set_active(is_active: bool) -> void:
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
+	_update_text()
 
 
 func _process(_delta: float) -> void:
@@ -23,19 +24,33 @@ func _process(_delta: float) -> void:
 
 
 func _buy_plot() -> void:
-	if GameState.money < 10:
+	var cost: int = GameState.get_plot_cost()
+	if GameState.money < cost or GameState.plots >= GameState.max_plots:
 		return
 
-	GameState.money -= 10
+	GameState.money -= cost
 	GameState.plots += 1
 	plot_purchased.emit()
+	_update_text()
+
+
+func _update_text() -> void:
+	if player_in_range:
+		var cost: int = GameState.get_plot_cost()
+		if GameState.money >= cost:
+			$Label.text = "Buy plot for " + str(cost) + " gold?"
+		else:
+			$Label.text = "Need " + str(cost) + " gold to buy plot"
+	$Label.visible = player_in_range
 
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		player_in_range = true
+		_update_text()
 
 
 func _on_body_exited(body: Node) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
+		_update_text()

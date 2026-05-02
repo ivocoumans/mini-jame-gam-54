@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://l375cc1c8aly" path="res://assets/characters/monkey.png" id="1_uvb1g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j0r2x"]
-radius = 19.026299
+radius = 24.0
 
 [node name="Monkey" type="CharacterBody2D" unique_id=1190872027]
 script = ExtResource("1_usfkj")
@@ -15,4 +15,15 @@ region_enabled = true
 region_rect = Rect2(0, 0, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=287657666]
+position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_j0r2x")
+
+[node name="Label" type="Label" parent="." unique_id=513870979]
+visible = false
+z_index = 15
+offset_left = -175.0
+offset_top = -56.0
+offset_right = 175.0
+offset_bottom = -33.0
+text = "+1 Sapling"
+horizontal_alignment = 1

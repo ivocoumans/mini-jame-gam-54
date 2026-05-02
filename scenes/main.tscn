@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://defefwx5vus7v" path="res://scenes/objects/stall.tscn" id="3_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://xvkwjej8w68l" path="res://scenes/objects/tree.tscn" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://b2lk3dp125k15" path="res://scenes/characters/farmer.tscn" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://42yp5csyq2u7" path="res://scenes/objects/bank.tscn" id="5_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://dkh4t1dkra6kj" path="res://assets/background.png" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://bvx7mbkg1218w" path="res://scenes/objects/shrine.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://dolevyi7jve21" path="res://scenes/characters/capitalist.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cf5qyavfdrsi" path="res://ui/ui.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://bovkdm3ejoyo8" path="res://scenes/characters/business.tscn" id="11_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://ci5kdk6helvqh" path="res://assets/buildings/bank.png" id="12_trceg"]
 
 [node name="Main" type="Node2D" unique_id=1607015717]
 script = ExtResource("1_o6xl0")
@@ -24,10 +24,13 @@ metadata/_edit_lock_ = true
 [node name="Objects" type="Node2D" parent="." unique_id=1778554165]
 
 [node name="Barn" parent="Objects" unique_id=1559489125 instance=ExtResource("2_tefeu")]
-position = Vector2(1058, 206)
+position = Vector2(1089, 171)
 
 [node name="Stall" parent="Objects" unique_id=223049927 instance=ExtResource("3_o6xl0")]
-position = Vector2(896, 124)
+position = Vector2(881, 94)
+
+[node name="Bank" parent="Objects" unique_id=2131931251 instance=ExtResource("5_eb6dy")]
+position = Vector2(1085, 183)
 
 [node name="Shrine" parent="Objects" unique_id=186259385 instance=ExtResource("8_tipki")]
 position = Vector2(697, 140)
@@ -35,13 +38,13 @@ position = Vector2(697, 140)
 [node name="NPCs" type="Node2D" parent="." unique_id=1932070118]
 
 [node name="Farmer" parent="NPCs" unique_id=1706043463 instance=ExtResource("5_85g3d")]
-position = Vector2(995, 264)
+position = Vector2(991, 295)
 
 [node name="Capitalist" parent="NPCs" unique_id=1916785000 instance=ExtResource("9_85g3d")]
-position = Vector2(890, 158)
+position = Vector2(876, 145)
 
 [node name="Business" parent="NPCs" unique_id=1382908461 instance=ExtResource("11_eb6dy")]
-position = Vector2(947, 443)
+position = Vector2(985, 300)
 
 [node name="Trees" type="Node2D" parent="." unique_id=1251798589]
 
@@ -76,7 +79,3 @@ position = Vector2(238, 586)
 position = Vector2(764, 278)
 
 [node name="UI" parent="." unique_id=1037376573 instance=ExtResource("10_choun")]
-
-[node name="Bank" type="Sprite2D" parent="." unique_id=1136250931]
-position = Vector2(1043, 395)
-texture = ExtResource("12_trceg")

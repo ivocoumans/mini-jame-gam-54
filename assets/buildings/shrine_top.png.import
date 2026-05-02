@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caoow8rvth8hs"
-path="res://.godot/imported/tree.png-4374f3711c31954246e8074816049f6a.ctex"
+uid="uid://c6dhmuh87ycsh"
+path="res://.godot/imported/shrine_top.png-7eab4bcd395e96bb00fc605e20682bc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props/tree.png"
-dest_files=["res://.godot/imported/tree.png-4374f3711c31954246e8074816049f6a.ctex"]
+source_file="res://assets/buildings/shrine_top.png"
+dest_files=["res://.godot/imported/shrine_top.png-7eab4bcd395e96bb00fc605e20682bc3.ctex"]
 
 [params]
 

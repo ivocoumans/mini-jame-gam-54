@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyips53jrmdyg"
-path="res://.godot/imported/stall.png-540d9b4876261e04f13a4ff6dc3a3bb4.ctex"
+uid="uid://bueqkashjs8pv"
+path="res://.godot/imported/tree_top.png-91b1cf7236eabf9db542efc321e277e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/buildings/stall.png"
-dest_files=["res://.godot/imported/stall.png-540d9b4876261e04f13a4ff6dc3a3bb4.ctex"]
+source_file="res://assets/props/tree_top.png"
+dest_files=["res://.godot/imported/tree_top.png-91b1cf7236eabf9db542efc321e277e9.ctex"]
 
 [params]
 

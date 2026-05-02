@@ -2,6 +2,30 @@ extends CharacterBody2D
 
 @export var move_speed: float = 175.0
 
+@onready var text_label: Label = $Label
+
+var text_tween: Tween
+
+
+func show_text(message: String, duration: float = 2.0) -> void:
+	if text_tween:
+		text_tween.kill()
+	
+	# show text
+	text_label.text = message
+	text_label.visible = true
+	text_label.modulate.a = 1.0
+	text_tween = create_tween()
+
+	# fade out
+	text_tween.tween_interval(duration)
+	text_tween.tween_property(text_label, "modulate:a", 0.0, 0.3)
+	text_tween.tween_callback(_hide_text)
+
+
+func _hide_text() -> void:
+	text_label.visible = false
+
 
 func _ready() -> void:
 	add_to_group("player")

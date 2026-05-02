@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0yr0mwp550g4" path="res://assets/characters/farmer.png" id="1_qylkb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ltshc"]
-radius = 61.008198
+radius = 65.0
 
 [node name="Farmer" type="Area2D" unique_id=542813445]
 script = ExtResource("1_ltshc")
@@ -16,3 +16,12 @@ region_rect = Rect2(0, 0, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=509009689]
 shape = SubResource("CircleShape2D_ltshc")
+
+[node name="Label" type="Label" parent="." unique_id=1469204416]
+z_index = 15
+offset_left = -175.0
+offset_top = -56.0
+offset_right = 175.0
+offset_bottom = -33.0
+text = "Buy sapling for 3 gold?"
+horizontal_alignment = 1

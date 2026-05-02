@@ -1,19 +1,33 @@
 [gd_scene format=3 uid="uid://bvx7mbkg1218w"]
 
 [ext_resource type="Script" uid="uid://ogm0xccoixvy" path="res://scenes/objects/shrine.gd" id="1_1mvik"]
-[ext_resource type="Texture2D" uid="uid://conk11360dwpc" path="res://assets/props/shrine.png" id="1_xar0x"]
+[ext_resource type="Texture2D" uid="uid://c6dhmuh87ycsh" path="res://assets/buildings/shrine_top.png" id="2_6cpab"]
+[ext_resource type="Texture2D" uid="uid://bij4cmnamn8ce" path="res://assets/buildings/shrine_bottom.png" id="3_6cpab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mvik"]
+size = Vector2(66, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xar0x"]
 size = Vector2(127, 92)
 
-[node name="Shrine" type="Area2D" unique_id=112304218]
+[node name="Shrine" type="StaticBody2D" unique_id=1107835954]
 script = ExtResource("1_1mvik")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=388677297]
-scale = Vector2(2, 2)
-texture = ExtResource("1_xar0x")
+[node name="SpriteTop" type="Sprite2D" parent="." unique_id=388677297]
+z_index = 10
+texture = ExtResource("2_6cpab")
 region_rect = Rect2(0, 0, 64, 128)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1015196314]
+[node name="SpriteBottom" type="Sprite2D" parent="." unique_id=1706609031]
+texture = ExtResource("3_6cpab")
+region_rect = Rect2(0, 0, 64, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1913332291]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_1mvik")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1943624658]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1015196314]
 position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_xar0x")

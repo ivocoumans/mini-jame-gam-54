@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c4w00uss4my68" path="res://scenes/characters/capitalist.gd" id="1_i0txp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eavj3"]
-radius = 63.07139
+radius = 65.0
 
 [node name="Capitalist" type="Area2D" unique_id=1087623159]
 script = ExtResource("1_i0txp")
@@ -16,3 +16,12 @@ region_rect = Rect2(0, 0, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994343644]
 shape = SubResource("CircleShape2D_eavj3")
+
+[node name="Label" type="Label" parent="." unique_id=366886503]
+z_index = 15
+offset_left = -175.0
+offset_top = -56.0
+offset_right = 175.0
+offset_bottom = -33.0
+text = "Sell all bananas?"
+horizontal_alignment = 1

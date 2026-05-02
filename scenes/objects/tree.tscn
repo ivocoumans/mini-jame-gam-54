@@ -1,19 +1,35 @@
 [gd_scene format=3 uid="uid://xvkwjej8w68l"]
 
 [ext_resource type="Script" uid="uid://b6xsrfti3wdji" path="res://scenes/objects/tree.gd" id="1_5qchx"]
-[ext_resource type="Texture2D" uid="uid://caoow8rvth8hs" path="res://assets/props/tree.png" id="1_r6wkp"]
+[ext_resource type="Texture2D" uid="uid://bueqkashjs8pv" path="res://assets/props/tree_top.png" id="2_eogu4"]
+[ext_resource type="Texture2D" uid="uid://c73v74wcnu55m" path="res://assets/props/tree_bottom.png" id="3_7yu6v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eogu4"]
+size = Vector2(62, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qchx"]
 size = Vector2(127, 131)
 
-[node name="Tree" type="Area2D" unique_id=677495086]
+[node name="Tree" type="StaticBody2D" unique_id=179928366]
 script = ExtResource("1_5qchx")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=388677297]
-texture = ExtResource("1_r6wkp")
+[node name="SpriteTop" type="Sprite2D" parent="." unique_id=388677297]
+z_index = 10
+texture = ExtResource("2_eogu4")
 region_enabled = true
 region_rect = Rect2(0, 0, 64, 128)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=748684385]
+[node name="SpriteBottom" type="Sprite2D" parent="." unique_id=925672753]
+texture = ExtResource("3_7yu6v")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1736373760]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_eogu4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2038275329]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=748684385]
 position = Vector2(1, 33)
 shape = SubResource("RectangleShape2D_5qchx")

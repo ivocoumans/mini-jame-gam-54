@@ -1,8 +1,22 @@
 [gd_scene format=3 uid="uid://42yp5csyq2u7"]
 
-[ext_resource type="Texture2D" uid="uid://ci5kdk6helvqh" path="res://assets/buildings/bank.png" id="1_wyeiv"]
+[ext_resource type="Script" uid="uid://dv4y42s4hqih5" path="res://scenes/objects/bank.gd" id="1_8qnke"]
+[ext_resource type="Texture2D" uid="uid://b0yipn1k1l1fn" path="res://assets/buildings/bank_top.png" id="2_w0tma"]
+[ext_resource type="Texture2D" uid="uid://dnajqn2aqmoew" path="res://assets/buildings/bank_bottom.png" id="3_w0tma"]
 
-[node name="Bank" type="Node2D" unique_id=1559489125]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0tma"]
+size = Vector2(101, 70)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=986384604]
-texture = ExtResource("1_wyeiv")
+[node name="Bank" type="StaticBody2D" unique_id=1043952840]
+script = ExtResource("1_8qnke")
+
+[node name="SpriteTop" type="Sprite2D" parent="." unique_id=986384604]
+z_index = 10
+texture = ExtResource("2_w0tma")
+
+[node name="SpriteBottom" type="Sprite2D" parent="." unique_id=1165743084]
+texture = ExtResource("3_w0tma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=444412043]
+position = Vector2(-0.5, 17)
+shape = SubResource("RectangleShape2D_w0tma")
