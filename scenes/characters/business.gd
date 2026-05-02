@@ -2,6 +2,7 @@ extends Area2D
 
 
 signal plot_purchased
+signal action_failed
 
 
 var player_in_range: bool = false
@@ -26,6 +27,7 @@ func _process(_delta: float) -> void:
 func _buy_plot() -> void:
 	var cost: int = GameState.get_plot_cost()
 	if GameState.money < cost or GameState.plots >= GameState.max_plots:
+		action_failed.emit()
 		return
 
 	GameState.money -= cost
@@ -37,7 +39,9 @@ func _buy_plot() -> void:
 func _update_text() -> void:
 	if player_in_range:
 		var cost: int = GameState.get_plot_cost()
-		if GameState.money >= cost:
+		if GameState.plots >= GameState.max_plots:
+			$Label.text = "No more plots available!"
+		elif GameState.money >= cost:
 			$Label.text = "Buy plot for " + str(cost) + " gold?"
 		else:
 			$Label.text = "Need " + str(cost) + " gold to buy plot"

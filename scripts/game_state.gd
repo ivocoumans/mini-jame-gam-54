@@ -7,7 +7,7 @@ var bananas: int = 0
 var plots: int = 1
 var max_plots: int = 9
 
-var _sapling_costs: Array[int] = [3, 4, 5, 6, 7, 8, 9, 9]
+var _sapling_costs: Array[int] = [3, 4, 5, 6, 7, 8, 9, 10, 10]
 var _plot_costs: Array[int] = [15, 30, 50, 75, 165, 185, 350, 400, 400]
 var _banana_yields: Array[int] = [3, 3, 3, 3, 4, 4, 5, 5, 5]
 var _banana_values: Array[int] = [3, 3, 3, 3, 3, 3, 3, 3, 3]

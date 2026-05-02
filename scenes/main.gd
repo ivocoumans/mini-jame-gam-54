@@ -15,9 +15,13 @@ func _ready() -> void:
 	for tree in trees:
 		tree.planted.connect(_on_tree_planted)
 		tree.harvested.connect(_on_tree_harvested)
+		tree.action_failed.connect(_on_action_failed)
 	$NPCs/Capitalist.bananas_sold.connect(_on_bananas_sold)
+	$NPCs/Capitalist.action_failed.connect(_on_action_failed)
 	$NPCs/Farmer.sapling_purchased.connect(_on_sapling_purchased)
+	$NPCs/Farmer.action_failed.connect(_on_action_failed)
 	$NPCs/Business.plot_purchased.connect(_on_plot_purchased)
+	$NPCs/Business.action_failed.connect(_on_action_failed)
 	$UI.update()
 	_refresh_world()
 
@@ -47,31 +51,41 @@ func _on_shrine_activated() -> void:
 	GameState.is_future = !GameState.is_future
 	_refresh_world()
 	$UI.update()
+	$Monkey.play_animation("successful_action")
 
 
 func _on_tree_planted() -> void:
 	$UI.update()
+	$Monkey.play_animation("successful_action")
 
 
 func _on_tree_harvested(amount: int) -> void:
 	$UI.update()
 	$Monkey.show_text("+" + str(amount) + " bananas")
+	$Monkey.play_animation("successful_action")
 
 
 func _on_bananas_sold(value: int) -> void:
 	$UI.update()
 	$Monkey.show_text("+" + str(value) + " gold")
+	$Monkey.play_animation("successful_action")
 
 
 func _on_sapling_purchased() -> void:
 	$UI.update()
 	$Monkey.show_text("+1 sapling")
+	$Monkey.play_animation("successful_action")
 
 
 func _on_plot_purchased() -> void:
 	$UI.update()
 	_update_trees()
 	$Monkey.show_text("+1 plot")
+	$Monkey.play_animation("successful_action")
+
+
+func _on_action_failed() -> void:
+	$Monkey.play_animation("failed_action")
 
 
 func _input(event: InputEvent) -> void:

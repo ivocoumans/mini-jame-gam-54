@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://gc74xdrhca1l"]
-
-[ext_resource type="Texture2D" uid="uid://cai5qar403whq" path="res://assets/buildings/jail.png" id="1_s88n8"]
-
-[node name="Jail" type="Node2D" unique_id=1559489125]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=986384604]
-texture = ExtResource("1_s88n8")

@@ -2,6 +2,7 @@ extends Area2D
 
 
 signal sapling_purchased
+signal action_failed
 
 
 var player_in_range: bool = false
@@ -26,6 +27,7 @@ func _process(_delta: float) -> void:
 func _buy_sapling() -> void:
 	var cost: int = GameState.get_sapling_cost()
 	if GameState.money < cost:
+		action_failed.emit()
 		return
 
 	GameState.saplings += 1

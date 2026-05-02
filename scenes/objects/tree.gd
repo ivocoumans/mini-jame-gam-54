@@ -7,6 +7,7 @@ enum TreeState {
 }
 
 signal planted
+signal action_failed
 signal harvested(amount: int)
 
 @onready var sprite_top: Sprite2D = $SpriteTop
@@ -50,6 +51,8 @@ func _process(_delta: float) -> void:
 			state = TreeState.EMPTY
 			_update_sprite_region()
 			harvested.emit(amount)
+		else:
+			action_failed.emit()
 
 
 func _on_body_entered(body: Node) -> void:

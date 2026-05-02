@@ -2,6 +2,7 @@ extends Area2D
 
 
 signal bananas_sold(value: int)
+signal action_failed
 
 
 var player_in_range: bool = false
@@ -25,6 +26,7 @@ func _process(_delta: float) -> void:
 
 func _sell_all_bananas() -> void:
 	if GameState.bananas <= 0:
+		action_failed.emit()
 		return
 
 	var total: int = GameState.bananas * GameState.get_banana_value()

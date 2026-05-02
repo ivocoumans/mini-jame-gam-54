@@ -3,16 +3,102 @@
 [ext_resource type="Script" uid="uid://c4k63f1obrhwa" path="res://scenes/characters/monkey.gd" id="1_usfkj"]
 [ext_resource type="Texture2D" uid="uid://l375cc1c8aly" path="res://assets/characters/monkey.png" id="1_uvb1g"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_usfkj"]
+atlas = ExtResource("1_uvb1g")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62358"]
+atlas = ExtResource("1_uvb1g")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8480"]
+atlas = ExtResource("1_uvb1g")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0r2x"]
+atlas = ExtResource("1_uvb1g")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voamr"]
+atlas = ExtResource("1_uvb1g")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmpc0"]
+atlas = ExtResource("1_uvb1g")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_voamr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usfkj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62358")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8480")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8480")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8480")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usfkj")
+}],
+"loop": false,
+"name": &"failed_action",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0r2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voamr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voamr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voamr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usfkj")
+}],
+"loop": false,
+"name": &"successful_action",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmpc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usfkj")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 3.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_j0r2x"]
 radius = 24.0
 
 [node name="Monkey" type="CharacterBody2D" unique_id=1190872027]
 script = ExtResource("1_usfkj")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=379442946]
-texture = ExtResource("1_uvb1g")
-region_enabled = true
-region_rect = Rect2(0, 0, 64, 64)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=464254825]
+sprite_frames = SubResource("SpriteFrames_voamr")
+animation = &"failed_action"
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=287657666]
 position = Vector2(-2, 0)
