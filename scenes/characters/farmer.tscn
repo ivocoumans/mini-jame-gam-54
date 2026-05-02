@@ -20,8 +20,10 @@ shape = SubResource("CircleShape2D_ltshc")
 [node name="Label" type="Label" parent="." unique_id=1469204416]
 z_index = 15
 offset_left = -175.0
-offset_top = -56.0
+offset_top = -80.0
 offset_right = 175.0
-offset_bottom = -33.0
-text = "Buy sapling for 3 gold?"
+offset_bottom = -31.0
+text = "[E] Buy sapling for 3 gold?
+[F] Buy all (3) for 9 gold?"
 horizontal_alignment = 1
+vertical_alignment = 2

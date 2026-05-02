@@ -7,6 +7,13 @@ extends CharacterBody2D
 var text_tween: Tween
 
 
+func update_speed() -> void:
+	var new_move_speed: float = GameState.get_movement_speed()
+	if new_move_speed > move_speed:
+		move_speed = new_move_speed
+		show_text("Movement speed increased!")
+
+
 func play_animation(animation_name: String) -> void:
 	$AnimatedSprite2D.play(animation_name)
 
@@ -43,4 +50,6 @@ func _physics_process(_delta: float) -> void:
 	velocity = input_direction * move_speed
 	if velocity != Vector2.ZERO:
 		$AnimatedSprite2D.play("walk")
+		if input_direction.x != 0:
+			$AnimatedSprite2D.flip_h = input_direction.x < 0
 	move_and_slide()

@@ -44,12 +44,14 @@ func _process(_delta: float) -> void:
 			GameState.saplings = GameState.saplings - 1
 			state = TreeState.SAPLING
 			_update_sprite_region()
+			_update_text()
 			planted.emit()
 		elif state == TreeState.HARVEST and GameState.is_future == true:
 			var amount: int = GameState.get_banana_yield()
 			GameState.bananas = GameState.bananas + amount
 			state = TreeState.EMPTY
 			_update_sprite_region()
+			_update_text()
 			harvested.emit(amount)
 		else:
 			action_failed.emit()
@@ -58,11 +60,30 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		player_in_range = true
+		_update_text()
 
 
 func _on_body_exited(body: Node) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
+		_update_text()
+
+
+func _update_text() -> void:
+	var action_text: String = ""
+	var show_label: bool = false
+	var label_position_y: int = -73
+	if state == TreeState.EMPTY and !GameState.is_future and GameState.saplings > 0:
+		action_text = "Plant sapling"
+		label_position_y = -33
+		show_label = true
+	elif state == TreeState.HARVEST and GameState.is_future:
+		action_text = "Harvest"
+		show_label = true
+	if show_label:
+		$Label.text = "[E] " + action_text
+		$Label.position.y = label_position_y
+	$Label.visible = player_in_range && show_label
 
 
 func _set_state(new_state: TreeState) -> void:

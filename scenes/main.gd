@@ -4,11 +4,11 @@ extends Node2D
 
 
 func _ready() -> void:
-	if OS.is_debug_build():
-		GameState.money = 99999
-		GameState.bananas = 999
-		GameState.saplings = 999
-		GameState.plots = 9
+	#if OS.is_debug_build():
+		#GameState.money = 99999
+		#GameState.bananas = 999
+		#GameState.saplings = 999
+		#GameState.plots = 9
 	
 	shrine.shrine_activated.connect(_on_shrine_activated)
 	var trees = $Trees.get_children()
@@ -27,8 +27,8 @@ func _ready() -> void:
 
 
 func _refresh_world() -> void:
-	$Objects/Barn.set_active(GameState.is_future)
-	$NPCs/Farmer.set_active(GameState.is_future)
+	$Objects/Barn.set_active(!GameState.is_future)
+	$NPCs/Farmer.set_active(!GameState.is_future)
 	$Objects/Stall.set_active(GameState.is_future)
 	$NPCs/Capitalist.set_active(GameState.is_future)
 	$Objects/Bank.set_active(!GameState.is_future)
@@ -82,6 +82,7 @@ func _on_plot_purchased() -> void:
 	_update_trees()
 	$Monkey.show_text("+1 plot")
 	$Monkey.play_animation("successful_action")
+	$Monkey.update_speed()
 
 
 func _on_action_failed() -> void:

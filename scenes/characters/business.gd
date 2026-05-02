@@ -42,7 +42,7 @@ func _update_text() -> void:
 		if GameState.plots >= GameState.max_plots:
 			$Label.text = "No more plots available!"
 		elif GameState.money >= cost:
-			$Label.text = "Buy plot for " + str(cost) + " gold?"
+			$Label.text = "[E] Buy plot for " + str(cost) + " gold?"
 		else:
 			$Label.text = "Need " + str(cost) + " gold to buy plot"
 	$Label.visible = player_in_range

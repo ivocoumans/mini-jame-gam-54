@@ -23,5 +23,5 @@ offset_left = -175.0
 offset_top = -56.0
 offset_right = 175.0
 offset_bottom = -33.0
-text = "Sell all bananas?"
+text = "[E] Sell all bananas?"
 horizontal_alignment = 1

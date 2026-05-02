@@ -31,3 +31,13 @@ shape = SubResource("RectangleShape2D_1mvik")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1015196314]
 position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_xar0x")
+
+[node name="Label" type="Label" parent="." unique_id=1682262151]
+visible = false
+z_index = 15
+offset_left = -175.0
+offset_top = -75.0
+offset_right = 175.0
+offset_bottom = -52.0
+text = "[E] Recalibrate Chrono Index"
+horizontal_alignment = 1

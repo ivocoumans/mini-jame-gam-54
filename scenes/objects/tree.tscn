@@ -33,3 +33,13 @@ shape = SubResource("RectangleShape2D_eogu4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=748684385]
 position = Vector2(1, 33)
 shape = SubResource("RectangleShape2D_5qchx")
+
+[node name="Label" type="Label" parent="." unique_id=662987375]
+visible = false
+z_index = 15
+offset_left = -175.0
+offset_top = -73.0
+offset_right = 175.0
+offset_bottom = -50.0
+text = "[E] Plant sapling"
+horizontal_alignment = 1

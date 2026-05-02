@@ -7,10 +7,11 @@ var bananas: int = 0
 var plots: int = 1
 var max_plots: int = 9
 
-var _sapling_costs: Array[int] = [3, 4, 5, 6, 7, 8, 9, 10, 10]
-var _plot_costs: Array[int] = [15, 30, 50, 75, 165, 185, 350, 400, 400]
-var _banana_yields: Array[int] = [3, 3, 3, 3, 4, 4, 5, 5, 5]
+var _sapling_costs: Array[int] = [3, 3, 3, 3, 3, 3, 3, 3, 3]
+var _plot_costs: Array[int] = [9, 20, 50, 70, 115, 140, 210, 235, 235]
+var _banana_yields: Array[int] = [3, 3, 3, 3, 3, 3, 3, 3, 3]
 var _banana_values: Array[int] = [3, 3, 3, 3, 3, 3, 3, 3, 3]
+var _movement_speed: Array[float] = [175.0, 175.0, 180.0, 180.0, 185.0, 185.0, 195.0, 195.0, 200.0]
 
 
 func get_sapling_cost() -> int:
@@ -27,3 +28,7 @@ func get_banana_yield() -> int:
 
 func get_banana_value() -> int:
 	return _banana_values[plots - 1]
+
+
+func get_movement_speed() -> float:
+	return _movement_speed[plots - 1]

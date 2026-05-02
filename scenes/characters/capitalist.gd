@@ -41,7 +41,7 @@ func _update_text() -> void:
 		var value: int = GameState.get_banana_value()
 		var total: int = GameState.bananas * value
 		if GameState.bananas > 0:
-			$Label.text = "Sell all bananas for " + str(total) + " gold?"
+			$Label.text = "[E] Sell all bananas for " + str(total) + " gold?"
 		else:
 			$Label.text = "Bring bananas to sell for " + str(value) + " gold each"
 	$Label.visible = player_in_range

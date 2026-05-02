@@ -20,8 +20,10 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		player_in_range = true
+		$Label.visible = true
 
 
 func _on_body_exited(body: Node) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
+		$Label.visible = false

@@ -24,58 +24,58 @@ metadata/_edit_lock_ = true
 [node name="Objects" type="Node2D" parent="." unique_id=1778554165]
 
 [node name="Barn" parent="Objects" unique_id=1559489125 instance=ExtResource("2_tefeu")]
-position = Vector2(1089, 171)
+position = Vector2(905, 75)
 
 [node name="Stall" parent="Objects" unique_id=223049927 instance=ExtResource("3_o6xl0")]
-position = Vector2(881, 94)
+position = Vector2(889, 110)
 
 [node name="Bank" parent="Objects" unique_id=2131931251 instance=ExtResource("5_eb6dy")]
-position = Vector2(1085, 183)
+position = Vector2(1093, 255)
 
 [node name="Shrine" parent="Objects" unique_id=186259385 instance=ExtResource("8_tipki")]
-position = Vector2(697, 140)
+position = Vector2(694, 140)
 
 [node name="NPCs" type="Node2D" parent="." unique_id=1932070118]
 
 [node name="Farmer" parent="NPCs" unique_id=1706043463 instance=ExtResource("5_85g3d")]
-position = Vector2(991, 295)
+position = Vector2(887, 215)
 
 [node name="Capitalist" parent="NPCs" unique_id=1916785000 instance=ExtResource("9_85g3d")]
-position = Vector2(876, 145)
+position = Vector2(884, 161)
 
 [node name="Business" parent="NPCs" unique_id=1382908461 instance=ExtResource("11_eb6dy")]
-position = Vector2(985, 300)
+position = Vector2(1001, 380)
 
 [node name="Trees" type="Node2D" parent="." unique_id=1251798589]
 
 [node name="Tree" parent="Trees" unique_id=1952911316 instance=ExtResource("4_tipki")]
-position = Vector2(558, 266)
+position = Vector2(534, 266)
 
 [node name="Tree2" parent="Trees" unique_id=677495086 instance=ExtResource("4_tipki")]
-position = Vector2(398, 266)
+position = Vector2(374, 266)
 
 [node name="Tree3" parent="Trees" unique_id=1072858547 instance=ExtResource("4_tipki")]
-position = Vector2(238, 266)
+position = Vector2(534, 426)
 
 [node name="Tree4" parent="Trees" unique_id=457752374 instance=ExtResource("4_tipki")]
-position = Vector2(558, 426)
+position = Vector2(374, 426)
 
 [node name="Tree5" parent="Trees" unique_id=2099795492 instance=ExtResource("4_tipki")]
-position = Vector2(398, 426)
+position = Vector2(534, 586)
 
 [node name="Tree6" parent="Trees" unique_id=1281543804 instance=ExtResource("4_tipki")]
-position = Vector2(238, 426)
+position = Vector2(374, 586)
 
 [node name="Tree7" parent="Trees" unique_id=35965159 instance=ExtResource("4_tipki")]
-position = Vector2(558, 586)
+position = Vector2(694, 586)
 
 [node name="Tree8" parent="Trees" unique_id=459044844 instance=ExtResource("4_tipki")]
-position = Vector2(398, 586)
+position = Vector2(694, 426)
 
 [node name="Tree9" parent="Trees" unique_id=617101411 instance=ExtResource("4_tipki")]
-position = Vector2(238, 586)
+position = Vector2(694, 266)
 
 [node name="Monkey" parent="." unique_id=991147967 instance=ExtResource("1_tbgi4")]
-position = Vector2(764, 278)
+position = Vector2(823, 289)
 
 [node name="UI" parent="." unique_id=1037376573 instance=ExtResource("10_choun")]
