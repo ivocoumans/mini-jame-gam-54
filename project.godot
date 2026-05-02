@@ -17,9 +17,15 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://c53mby81t1mb4"
+
 [autoload]
 
 GameState="*uid://qjsjx6k5iiwt"
+Bgm="*uid://b2qx6ch5cnrb2"
+Sfx="*uid://by6xhgw2qvjyd"
 
 [display]
 

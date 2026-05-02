@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var shrine: StaticBody2D = $Objects/Shrine
+@onready var bgm: AudioStream = preload("res://assets/audio/bgm.mp3")
+@onready var sfx_action: AudioStream = preload("res://assets/audio/click.wav")
+@onready var sfx_coin: AudioStream = preload("res://assets/audio/pickupCoin.wav")
+@onready var sfx_chrono: AudioStream = preload("res://assets/audio/powerUp.wav")
 
 
 func _ready() -> void:
@@ -24,6 +28,7 @@ func _ready() -> void:
 	$NPCs/Business.action_failed.connect(_on_action_failed)
 	$UI.update()
 	_refresh_world()
+	Bgm.play(bgm)
 
 
 func _refresh_world() -> void:
@@ -52,6 +57,8 @@ func _on_shrine_activated() -> void:
 	_refresh_world()
 	$UI.update()
 	$Monkey.play_animation("successful_action")
+	Bgm.update_audio()
+	Sfx.play(sfx_chrono)
 
 
 func _on_tree_planted() -> void:
@@ -63,12 +70,14 @@ func _on_tree_harvested(amount: int) -> void:
 	$UI.update()
 	$Monkey.show_text("+" + str(amount) + " bananas")
 	$Monkey.play_animation("successful_action")
+	Sfx.play(sfx_action)
 
 
 func _on_bananas_sold(value: int) -> void:
 	$UI.update()
 	$Monkey.show_text("+" + str(value) + " gold")
 	$Monkey.play_animation("successful_action")
+	Sfx.play(sfx_coin)
 
 
 func _on_sapling_purchased() -> void:
