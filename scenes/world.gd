@@ -12,6 +12,11 @@ extends Node2D
 signal trigger_ui_update
 
 
+func reset() -> void:
+	_refresh_world()
+	$Monkey.position = Vector2(800, 290)
+
+
 func _ready() -> void:
 	shrine.shrine_activated.connect(_on_shrine_activated)
 	var trees = $Trees.get_children()

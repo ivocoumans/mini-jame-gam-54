@@ -84,6 +84,7 @@ offset_bottom = 720.0
 color = Color(0, 0, 0, 0)
 
 [node name="StartScreen" type="Control" parent="." unique_id=467232144]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
@@ -119,7 +120,8 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "The banana farm has suffered a great drought. 
-Use your time travel abilities to restore all 9 tree plots!"
+Use your time travel abilities to restore all 9 tree plots
+and achieve temporal banana monopoly."
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="StartScreen/VBoxContainer" unique_id=2094217606]
@@ -129,13 +131,47 @@ text = "[E] Start Game"
 horizontal_alignment = 1
 
 [node name="WinScreen" type="Control" parent="." unique_id=1086198738]
+visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1280.0
+offset_bottom = 720.0
 
-[node name="ColorRect" type="ColorRect" parent="WinScreen" unique_id=708736657]
+[node name="ColorRect2" type="ColorRect" parent="WinScreen" unique_id=1669328673]
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
-color = Color(0, 0, 0, 0)
+color = Color(1, 1, 1, 0.33333334)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinScreen" unique_id=999345045]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -154.0
+offset_right = 246.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="WinScreen/VBoxContainer" unique_id=1817438723]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Chrono Banana Farm"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="WinScreen/VBoxContainer" unique_id=1350787820]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Temporal banana monopoly achieved.
+Congratulations!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="WinScreen/VBoxContainer" unique_id=1091974823]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "[E] Play Again"
+horizontal_alignment = 1

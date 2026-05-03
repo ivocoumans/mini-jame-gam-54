@@ -15,6 +15,14 @@ var _banana_values: Array[int] = [3, 3, 3, 3, 3, 3, 3, 3, 3]
 var _movement_speed: Array[float] = [175.0, 175.0, 180.0, 180.0, 185.0, 185.0, 195.0, 195.0, 200.0]
 
 
+func reset() -> void:
+	is_future = false
+	money = 0
+	saplings = 1
+	bananas = 0
+	plots = 1
+
+
 func get_sapling_cost() -> int:
 	return _sapling_costs[plots - 1]
 
