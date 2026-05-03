@@ -1,81 +1,14 @@
 [gd_scene format=3 uid="uid://cpgmyvef3aaog"]
 
 [ext_resource type="Script" uid="uid://co6sa5mgavrrd" path="res://scenes/main.gd" id="1_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://bnud6lt0jpu0a" path="res://scenes/characters/monkey.tscn" id="1_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://s3f623bq5y6u" path="res://scenes/objects/barn.tscn" id="2_tefeu"]
-[ext_resource type="PackedScene" uid="uid://defefwx5vus7v" path="res://scenes/objects/stall.tscn" id="3_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://xvkwjej8w68l" path="res://scenes/objects/tree.tscn" id="4_tipki"]
-[ext_resource type="PackedScene" uid="uid://b2lk3dp125k15" path="res://scenes/characters/farmer.tscn" id="5_85g3d"]
-[ext_resource type="PackedScene" uid="uid://42yp5csyq2u7" path="res://scenes/objects/bank.tscn" id="5_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://dkh4t1dkra6kj" path="res://assets/background.png" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://bvx7mbkg1218w" path="res://scenes/objects/shrine.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" uid="uid://dolevyi7jve21" path="res://scenes/characters/capitalist.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bgvyw18gakaac" path="res://scenes/world.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cf5qyavfdrsi" path="res://ui/ui.tscn" id="10_choun"]
-[ext_resource type="PackedScene" uid="uid://bovkdm3ejoyo8" path="res://scenes/characters/business.tscn" id="11_eb6dy"]
 
 [node name="Main" type="Node2D" unique_id=1607015717]
 script = ExtResource("1_o6xl0")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=732653417]
-position = Vector2(640, 360)
-texture = ExtResource("6_tefeu")
-metadata/_edit_lock_ = true
-
-[node name="Objects" type="Node2D" parent="." unique_id=1778554165]
-
-[node name="Barn" parent="Objects" unique_id=1559489125 instance=ExtResource("2_tefeu")]
-position = Vector2(905, 75)
-
-[node name="Stall" parent="Objects" unique_id=223049927 instance=ExtResource("3_o6xl0")]
-position = Vector2(889, 110)
-
-[node name="Bank" parent="Objects" unique_id=2131931251 instance=ExtResource("5_eb6dy")]
-position = Vector2(1093, 255)
-
-[node name="Shrine" parent="Objects" unique_id=186259385 instance=ExtResource("8_tipki")]
-position = Vector2(694, 140)
-
-[node name="NPCs" type="Node2D" parent="." unique_id=1932070118]
-
-[node name="Farmer" parent="NPCs" unique_id=1706043463 instance=ExtResource("5_85g3d")]
-position = Vector2(887, 215)
-
-[node name="Capitalist" parent="NPCs" unique_id=1916785000 instance=ExtResource("9_85g3d")]
-position = Vector2(884, 161)
-
-[node name="Business" parent="NPCs" unique_id=1382908461 instance=ExtResource("11_eb6dy")]
-position = Vector2(1001, 380)
-
-[node name="Trees" type="Node2D" parent="." unique_id=1251798589]
-
-[node name="Tree" parent="Trees" unique_id=1952911316 instance=ExtResource("4_tipki")]
-position = Vector2(534, 266)
-
-[node name="Tree2" parent="Trees" unique_id=677495086 instance=ExtResource("4_tipki")]
-position = Vector2(374, 266)
-
-[node name="Tree3" parent="Trees" unique_id=1072858547 instance=ExtResource("4_tipki")]
-position = Vector2(534, 426)
-
-[node name="Tree4" parent="Trees" unique_id=457752374 instance=ExtResource("4_tipki")]
-position = Vector2(374, 426)
-
-[node name="Tree5" parent="Trees" unique_id=2099795492 instance=ExtResource("4_tipki")]
-position = Vector2(534, 586)
-
-[node name="Tree6" parent="Trees" unique_id=1281543804 instance=ExtResource("4_tipki")]
-position = Vector2(374, 586)
-
-[node name="Tree7" parent="Trees" unique_id=35965159 instance=ExtResource("4_tipki")]
-position = Vector2(694, 586)
-
-[node name="Tree8" parent="Trees" unique_id=459044844 instance=ExtResource("4_tipki")]
-position = Vector2(694, 426)
-
-[node name="Tree9" parent="Trees" unique_id=617101411 instance=ExtResource("4_tipki")]
-position = Vector2(694, 266)
-
-[node name="Monkey" parent="." unique_id=991147967 instance=ExtResource("1_tbgi4")]
-position = Vector2(823, 289)
+[node name="World" parent="." unique_id=1556729598 instance=ExtResource("2_sugp2")]
 
 [node name="UI" parent="." unique_id=1037376573 instance=ExtResource("10_choun")]
+
+[connection signal="trigger_ui_update" from="World" to="." method="_on_world_trigger_ui_update"]

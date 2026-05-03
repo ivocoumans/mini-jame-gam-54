@@ -43,6 +43,9 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if !GameState.is_game_screen:
+		return
+	
 	var input_direction: Vector2 = Vector2.ZERO
 	input_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	input_direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")

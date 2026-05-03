@@ -6,6 +6,7 @@ var saplings: int = 1
 var bananas: int = 0
 var plots: int = 1
 var max_plots: int = 9
+var is_game_screen: bool = false
 
 var _sapling_costs: Array[int] = [3, 3, 3, 3, 3, 3, 3, 3, 3]
 var _plot_costs: Array[int] = [9, 20, 50, 70, 115, 140, 210, 235, 235]

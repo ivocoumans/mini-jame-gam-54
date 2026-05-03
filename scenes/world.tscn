@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bgvyw18gakaac"]
+
+[ext_resource type="Script" uid="uid://byjx5dvfao040" path="res://scenes/world.gd" id="1_e3hyu"]
+[ext_resource type="Texture2D" uid="uid://dkh4t1dkra6kj" path="res://assets/background.png" id="1_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://s3f623bq5y6u" path="res://scenes/objects/barn.tscn" id="2_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://defefwx5vus7v" path="res://scenes/objects/stall.tscn" id="3_q5onr"]
+[ext_resource type="PackedScene" uid="uid://42yp5csyq2u7" path="res://scenes/objects/bank.tscn" id="4_jhx03"]
+[ext_resource type="PackedScene" uid="uid://bvx7mbkg1218w" path="res://scenes/objects/shrine.tscn" id="5_o8fc1"]
+[ext_resource type="PackedScene" uid="uid://b2lk3dp125k15" path="res://scenes/characters/farmer.tscn" id="6_xo05s"]
+[ext_resource type="PackedScene" uid="uid://dolevyi7jve21" path="res://scenes/characters/capitalist.tscn" id="7_dss4m"]
+[ext_resource type="PackedScene" uid="uid://bovkdm3ejoyo8" path="res://scenes/characters/business.tscn" id="8_7t5mc"]
+[ext_resource type="PackedScene" uid="uid://xvkwjej8w68l" path="res://scenes/objects/tree.tscn" id="9_lakw3"]
+[ext_resource type="PackedScene" uid="uid://bnud6lt0jpu0a" path="res://scenes/characters/monkey.tscn" id="10_pm21f"]
+
+[node name="World" type="Node2D" unique_id=1556729598]
+script = ExtResource("1_e3hyu")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=182406946]
+position = Vector2(640, 360)
+texture = ExtResource("1_w7kh3")
+metadata/_edit_lock_ = true
+
+[node name="Objects" type="Node2D" parent="." unique_id=2543091]
+
+[node name="Barn" parent="Objects" unique_id=2141464149 instance=ExtResource("2_e3hyu")]
+position = Vector2(905, 75)
+
+[node name="Stall" parent="Objects" unique_id=491492270 instance=ExtResource("3_q5onr")]
+position = Vector2(889, 110)
+
+[node name="Bank" parent="Objects" unique_id=1043952840 instance=ExtResource("4_jhx03")]
+position = Vector2(1093, 255)
+
+[node name="Shrine" parent="Objects" unique_id=1107835954 instance=ExtResource("5_o8fc1")]
+position = Vector2(694, 140)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=2052309680]
+
+[node name="Farmer" parent="NPCs" unique_id=542813445 instance=ExtResource("6_xo05s")]
+position = Vector2(912, 207)
+
+[node name="Capitalist" parent="NPCs" unique_id=1087623159 instance=ExtResource("7_dss4m")]
+position = Vector2(884, 161)
+
+[node name="Business" parent="NPCs" unique_id=829950786 instance=ExtResource("8_7t5mc")]
+position = Vector2(1001, 380)
+
+[node name="Trees" type="Node2D" parent="." unique_id=1006079079]
+
+[node name="Tree" parent="Trees" unique_id=179928366 instance=ExtResource("9_lakw3")]
+position = Vector2(534, 266)
+
+[node name="Tree2" parent="Trees" unique_id=1013772646 instance=ExtResource("9_lakw3")]
+position = Vector2(374, 266)
+
+[node name="Tree3" parent="Trees" unique_id=363924803 instance=ExtResource("9_lakw3")]
+position = Vector2(534, 426)
+
+[node name="Tree4" parent="Trees" unique_id=1775619539 instance=ExtResource("9_lakw3")]
+position = Vector2(374, 426)
+
+[node name="Tree5" parent="Trees" unique_id=109666019 instance=ExtResource("9_lakw3")]
+position = Vector2(534, 586)
+
+[node name="Tree6" parent="Trees" unique_id=1207633232 instance=ExtResource("9_lakw3")]
+position = Vector2(374, 586)
+
+[node name="Tree7" parent="Trees" unique_id=251000548 instance=ExtResource("9_lakw3")]
+position = Vector2(694, 586)
+
+[node name="Tree8" parent="Trees" unique_id=308574040 instance=ExtResource("9_lakw3")]
+position = Vector2(694, 426)
+
+[node name="Tree9" parent="Trees" unique_id=551368072 instance=ExtResource("9_lakw3")]
+position = Vector2(694, 266)
+
+[node name="Monkey" parent="." unique_id=1190872027 instance=ExtResource("10_pm21f")]
+position = Vector2(806, 291)

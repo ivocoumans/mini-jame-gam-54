@@ -5,72 +5,137 @@
 [node name="UI" type="CanvasLayer" unique_id=1037376573]
 script = ExtResource("1_nb4k0")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1894055019]
+[node name="GameUI" type="Control" parent="." unique_id=1755100110]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI" unique_id=1894055019]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 351.0
 offset_bottom = 109.0
 theme_override_constants/separation = 50
 
-[node name="StatsContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=194581340]
+[node name="StatsContainer" type="VBoxContainer" parent="GameUI/HBoxContainer" unique_id=194581340]
 layout_mode = 2
 
-[node name="MoneyContainer" type="HBoxContainer" parent="HBoxContainer/StatsContainer" unique_id=340591558]
+[node name="MoneyContainer" type="HBoxContainer" parent="GameUI/HBoxContainer/StatsContainer" unique_id=340591558]
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="MoneyLabel" type="Label" parent="HBoxContainer/StatsContainer/MoneyContainer" unique_id=1194581416]
+[node name="MoneyLabel" type="Label" parent="GameUI/HBoxContainer/StatsContainer/MoneyContainer" unique_id=1194581416]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Money"
 
-[node name="MoneyValue" type="Label" parent="HBoxContainer/StatsContainer/MoneyContainer" unique_id=1633971008]
+[node name="MoneyValue" type="Label" parent="GameUI/HBoxContainer/StatsContainer/MoneyContainer" unique_id=1633971008]
 layout_mode = 2
 text = "0"
 
-[node name="TreeContainer" type="HBoxContainer" parent="HBoxContainer/StatsContainer" unique_id=1442086698]
+[node name="TreeContainer" type="HBoxContainer" parent="GameUI/HBoxContainer/StatsContainer" unique_id=1442086698]
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="TreeLabel" type="Label" parent="HBoxContainer/StatsContainer/TreeContainer" unique_id=1258165592]
+[node name="TreeLabel" type="Label" parent="GameUI/HBoxContainer/StatsContainer/TreeContainer" unique_id=1258165592]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Saplings"
 
-[node name="TreeValue" type="Label" parent="HBoxContainer/StatsContainer/TreeContainer" unique_id=2067452852]
+[node name="TreeValue" type="Label" parent="GameUI/HBoxContainer/StatsContainer/TreeContainer" unique_id=2067452852]
 layout_mode = 2
 text = "0"
 
-[node name="BananaContainer" type="HBoxContainer" parent="HBoxContainer/StatsContainer" unique_id=894510097]
+[node name="BananaContainer" type="HBoxContainer" parent="GameUI/HBoxContainer/StatsContainer" unique_id=894510097]
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="BananaLabel" type="Label" parent="HBoxContainer/StatsContainer/BananaContainer" unique_id=570780733]
+[node name="BananaLabel" type="Label" parent="GameUI/HBoxContainer/StatsContainer/BananaContainer" unique_id=570780733]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Bananas"
 
-[node name="BananaValue" type="Label" parent="HBoxContainer/StatsContainer/BananaContainer" unique_id=2102135972]
+[node name="BananaValue" type="Label" parent="GameUI/HBoxContainer/StatsContainer/BananaContainer" unique_id=2102135972]
 layout_mode = 2
 text = "0"
 
-[node name="InfoContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=362647824]
+[node name="InfoContainer" type="VBoxContainer" parent="GameUI/HBoxContainer" unique_id=362647824]
 layout_mode = 2
 
-[node name="YearContainer" type="HBoxContainer" parent="HBoxContainer/InfoContainer" unique_id=1844136689]
+[node name="YearContainer" type="HBoxContainer" parent="GameUI/HBoxContainer/InfoContainer" unique_id=1844136689]
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="YearLabel" type="Label" parent="HBoxContainer/InfoContainer/YearContainer" unique_id=1990227796]
+[node name="YearLabel" type="Label" parent="GameUI/HBoxContainer/InfoContainer/YearContainer" unique_id=1990227796]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Chrono Index"
 
-[node name="YearValue" type="Label" parent="HBoxContainer/InfoContainer/YearContainer" unique_id=708599096]
+[node name="YearValue" type="Label" parent="GameUI/HBoxContainer/InfoContainer/YearContainer" unique_id=708599096]
 layout_mode = 2
 text = "2144"
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2029886029]
+[node name="ColorRect" type="ColorRect" parent="GameUI" unique_id=2029886029]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0)
+
+[node name="StartScreen" type="Control" parent="." unique_id=467232144]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="ColorRect" type="ColorRect" parent="StartScreen" unique_id=634858794]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(1, 1, 1, 0.33333334)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartScreen" unique_id=497367968]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -154.0
+offset_right = 246.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="StartScreen/VBoxContainer" unique_id=1698218860]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Chrono Banana Farm"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="StartScreen/VBoxContainer" unique_id=1654145352]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "The banana farm has suffered a great drought. 
+Use your time travel abilities to restore all 9 tree plots!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="StartScreen/VBoxContainer" unique_id=2094217606]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "[E] Start Game"
+horizontal_alignment = 1
+
+[node name="WinScreen" type="Control" parent="." unique_id=1086198738]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="WinScreen" unique_id=708736657]
+layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0, 0, 0, 0)
